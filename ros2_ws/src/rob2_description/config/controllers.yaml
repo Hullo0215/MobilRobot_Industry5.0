@@ -1,0 +1,26 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    wheel_controller:
+      type: forward_command_controller/ForwardCommandController
+
+
+wheel_controller:
+  ros__parameters:
+    joints:
+      - B1_1_joint
+      - B2_1_joint
+      - B3_1_joint
+      - B4_1_joint
+      - B5_1_joint
+      - B6_1_joint
+      - J1_1_joint
+      - J2_1_joint
+      - J3_1_joint
+      - J4_1_joint
+      - J5_1_joint
+      - J6_1_joint
