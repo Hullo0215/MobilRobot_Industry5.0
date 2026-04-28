@@ -1,0 +1,593 @@
+<?xml version="1.0" ?>
+<robot name="rob2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find rob2_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find rob2_description)/urdf/rob2.ros2control" />
+<xacro:include filename="$(find rob2_description)/urdf/rob2.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="5.261070536877517e-09 2.835132512450283e-09 0.047758235544868716" rpy="0 0 0"/>
+    <mass value="3.6965248052014097"/>
+    <inertia ixx="0.005188" iyy="0.012928" izz="0.015067" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="B1_1">
+  <inertial>
+    <origin xyz="2.7755575615628914e-17 0.015 0.0" rpy="0 0 0"/>
+    <mass value="0.05453520428020286"/>
+    <inertia ixx="1.3e-05" iyy="1.7e-05" izz="1.3e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.09 -0.05 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.09 -0.05 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="B2_1">
+  <inertial>
+    <origin xyz="-6.938893903907228e-18 0.014999999999999986 0.0" rpy="0 0 0"/>
+    <mass value="0.019575349969274392"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.06 -0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.06 -0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="B3_1">
+  <inertial>
+    <origin xyz="-1.0408340855860843e-17 0.014999999999999986 -1.734723475976807e-18" rpy="0 0 0"/>
+    <mass value="0.019575349969274392"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.02 -0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.02 -0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="B4_1">
+  <inertial>
+    <origin xyz="-6.938893903907228e-18 0.015 -1.734723475976807e-18" rpy="0 0 0"/>
+    <mass value="0.019575349969274392"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.02 -0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.02 -0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="B5_1">
+  <inertial>
+    <origin xyz="-2.0816681711721685e-17 0.014999999999999986 0.0" rpy="0 0 0"/>
+    <mass value="0.019575349969274392"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.06 -0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.06 -0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="B6_1">
+  <inertial>
+    <origin xyz="0.0 0.015000000000000013 0.0" rpy="0 0 0"/>
+    <mass value="0.05453520428020285"/>
+    <inertia ixx="1.3e-05" iyy="1.7e-05" izz="1.3e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.09 -0.05 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.09 -0.05 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/B6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="J1_1">
+  <inertial>
+    <origin xyz="0.0 -0.014999999999999986 1.3877787807814457e-17" rpy="0 0 0"/>
+    <mass value="0.05453520428020284"/>
+    <inertia ixx="1.3e-05" iyy="1.7e-05" izz="1.3e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.09 0.05 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.09 0.05 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="J2_1">
+  <inertial>
+    <origin xyz="0.0 -0.015 3.469446951953614e-17" rpy="0 0 0"/>
+    <mass value="0.019575349969274392"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.06 0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.06 0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="J3_1">
+  <inertial>
+    <origin xyz="-6.938893903907228e-18 -0.015 3.122502256758253e-17" rpy="0 0 0"/>
+    <mass value="0.019575349969274392"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.02 0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.02 0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="J4_1">
+  <inertial>
+    <origin xyz="-6.938893903907228e-18 -0.015 3.122502256758253e-17" rpy="0 0 0"/>
+    <mass value="0.019575349969274392"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.02 0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.02 0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="J5_1">
+  <inertial>
+    <origin xyz="-2.0816681711721685e-17 -0.015 3.469446951953614e-17" rpy="0 0 0"/>
+    <mass value="0.019575349969274392"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.06 0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.06 0.05 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="J6_1">
+  <inertial>
+    <origin xyz="0.0 -0.014999999999999986 6.938893903907228e-18" rpy="0 0 0"/>
+    <mass value="0.05453520428020284"/>
+    <inertia ixx="1.3e-05" iyy="1.7e-05" izz="1.3e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.09 0.05 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.09 0.05 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/J6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component18_1">
+  <inertial>
+    <origin xyz="-6.938893903907228e-18 3.261528375619884e-17 0.016902647259499914" rpy="0 0 0"/>
+    <mass value="0.5732015530381446"/>
+    <inertia ixx="0.000181" iyy="0.000181" izz="0.00025" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.02 -0.0 -0.132" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Component18_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.02 -0.0 -0.132" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Component18_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component16_1">
+  <inertial>
+    <origin xyz="-0.05 2.2204460492503132e-17 0.015000000000000013" rpy="0 0 0"/>
+    <mass value="1.15584"/>
+    <inertia ixx="0.000703" iyy="0.000703" izz="0.001233" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Component16_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Component16_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Kamera_1">
+  <inertial>
+    <origin xyz="0.04785555140440506 9.479972362669287e-14 0.02375403663419623" rpy="0 0 0"/>
+    <mass value="0.16829615811797438"/>
+    <inertia ixx="5.1e-05" iyy="3.9e-05" izz="3.4e-05" ixy="0.0" iyz="-0.0" ixz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Kamera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Kamera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component17_1">
+  <inertial>
+    <origin xyz="-0.0275 0.037500000000000026 0.0010000000000000009" rpy="0 0 0"/>
+    <mass value="0.04535999999999983"/>
+    <inertia ixx="5.4e-05" iyy="1.9e-05" izz="7.3e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0075 0.0375 -0.13" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Component17_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0075 0.0375 -0.13" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Component17_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component15_1">
+  <inertial>
+    <origin xyz="-1.1102230246251566e-18 -0.039999999999999966 0.025000000000000036" rpy="0 0 0"/>
+    <mass value="0.011925"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Component15_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Component15_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component14_1">
+  <inertial>
+    <origin xyz="-1.5543122344752193e-17 0.03999999999999995 0.024999999999999925" rpy="0 0 0"/>
+    <mass value="0.011925"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Component14_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rob2_description)/meshes/Component14_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="B1_1_joint" type="continuous">
+  <origin xyz="0.09 0.05 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="B1_1"/>
+  <axis xyz="0 1 0"/>
+</joint>
+
+<joint name="B2_1_joint" type="continuous">
+  <origin xyz="0.06 0.05 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="B2_1"/>
+  <axis xyz="0 1 0"/>
+</joint>
+
+<joint name="B3_1_joint" type="continuous">
+  <origin xyz="0.02 0.05 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="B3_1"/>
+  <axis xyz="0 1 0"/>
+</joint>
+
+<joint name="B4_1_joint" type="continuous">
+  <origin xyz="-0.02 0.05 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="B4_1"/>
+  <axis xyz="0 1 0"/>
+</joint>
+
+<joint name="B5_1_joint" type="continuous">
+  <origin xyz="-0.06 0.05 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="B5_1"/>
+  <axis xyz="0 1 0"/>
+</joint>
+
+<joint name="B6_1_joint" type="continuous">
+  <origin xyz="-0.09 0.05 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="B6_1"/>
+  <axis xyz="0 1 0"/>
+</joint>
+
+<joint name="J1_1_joint" type="continuous">
+  <origin xyz="0.09 -0.05 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="J1_1"/>
+  <axis xyz="0 -1 0"/>
+</joint>
+
+<joint name="J2_1_joint" type="continuous">
+  <origin xyz="0.06 -0.05 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="J2_1"/>
+  <axis xyz="0 -1 0"/>
+</joint>
+
+<joint name="J3_1_joint" type="continuous">
+  <origin xyz="0.02 -0.05 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="J3_1"/>
+  <axis xyz="0 -1 0"/>
+</joint>
+
+<joint name="J4_1_joint" type="continuous">
+  <origin xyz="-0.02 -0.05 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="J4_1"/>
+  <axis xyz="0 -1 0"/>
+</joint>
+
+<joint name="J5_1_joint" type="continuous">
+  <origin xyz="-0.06 -0.05 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="J5_1"/>
+  <axis xyz="0 -1 0"/>
+</joint>
+
+<joint name="J6_1_joint" type="continuous">
+  <origin xyz="-0.09 -0.05 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="J6_1"/>
+  <axis xyz="0 -1 0"/>
+</joint>
+
+<joint name="lidar" type="fixed">
+  <origin xyz="-0.0275 0.0375 0.002" rpy="0 0 0"/>
+  <parent link="Component17_1"/>
+  <child link="Component18_1"/>
+</joint>
+
+<joint name="vezerlo" type="fixed">
+  <origin xyz="0.0 0.0 0.08" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Component16_1"/>
+</joint>
+
+<joint name="kamera" type="fixed">
+  <origin xyz="0.0 0.0 0.08" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Kamera_1"/>
+</joint>
+
+<joint name="Rigid 18" type="fixed">
+  <origin xyz="0.0075 -0.0375 0.05" rpy="0 0 0"/>
+  <parent link="Component15_1"/>
+  <child link="Component17_1"/>
+</joint>
+
+<joint name="Rigid 20" type="fixed">
+  <origin xyz="0.0 0.0 0.08" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Component15_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="0.0 0.0 0.08" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Component14_1"/>
+</joint>
+
+<ros2_control name="RobotControlSystem" type="system">
+  <hardware>
+    <plugin>mock_components/GenericSystem</plugin>
+  </hardware>
+
+  <joint name="B1_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="B2_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="B3_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="B4_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="B5_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="B6_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="J1_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="J2_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="J3_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="J4_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="J5_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="J6_1_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+
+</ros2_control>
+
+</robot>
