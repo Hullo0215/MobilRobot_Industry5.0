@@ -1,3 +1,0 @@
-[console_scripts]
-wheel_controller = rob2_description.wheel_controller:main
-
